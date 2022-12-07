@@ -38,10 +38,11 @@ main {
 
 /* Menu */
 #menu-wrapper {
-    display: grid;
-    justify-items: center;
-    align-items: end;
-    height: 10rem;
+    position: sticky;
+    text-align: center;
+    top: 0;
+    background-color: var(--white);
+    height: 3rem;
 }
 
 #menu ul li{
@@ -178,4 +179,49 @@ main {
 #contact-wrapper div a img{
     width: 7vw;
     margin: 1rem 1rem;
+}
+
+
+@media (max-width: 480px) {
+    #about-wrapper p {
+        font-size: var(--md-fs);
+        font-weight: 600;
+        letter-spacing: 0.2px;
+        line-height: 2.5rem;
+    }
+
+    #projects-wrapper {
+        row-gap: 6rem;
+        margin-top: 3rem;
+    }
+
+    #projects-wrapper div {
+        width: 70vw;
+    }
+
+    #projects-wrapper div img {
+        width: 70vw;
+    }
+
+    #skills-wrapper {
+        margin-top: 5rem;
+    }
+
+    #skills-wrapper ul li {
+        font-size: 2.2rem;
+        margin: 1rem;
+    }
+
+    #contact-wrapper {
+        margin-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    #contact-wrapper h2, #contact-wrapper h3 {
+        margin-left: 2rem;
+    }
+
+    #contact-wrapper div {
+        margin-left: 2rem;
+    }
 }
