@@ -33,7 +33,7 @@ html{
 main {
     display: grid;
     grid-template: 0.5 1fr 3fr 0.5fr 0.5fr / 1fr;
-    row-gap: 3rem;
+    row-gap: 5rem;
     height: 1200px;
 }
 
@@ -72,8 +72,8 @@ main {
 }
 
 #about-wrapper p {
-    width: 70%;
-    margin: 1rem auto;
+    width: 60%;
+    margin: auto;
     color: var(--gray);
     font-size: var(--lg-fs);
     font-weight: 600;
@@ -84,7 +84,6 @@ main {
 #profile-picture {
     width: 20vw;
     border-radius: 50%;
-    margin-top: 3rem;
 }
 
 /*  Projects */
@@ -93,7 +92,6 @@ main {
     grid-template-rows: 0.1fr repeat(3, 1fr);
     row-gap: 4rem;
     justify-items: center;
-    margin-top: 10rem;
 }
 
 #projects-wrapper div {
@@ -103,7 +101,7 @@ main {
 }
 
 #projects-wrapper div img {
-    width:60vw;
+    width: 60vw;
 }
 
 #projects-wrapper div h2 {
@@ -122,7 +120,6 @@ main {
 
 /*  Skills */
 #skills-wrapper {
-    margin-top: 10rem;
     text-align: center;
 }
 
@@ -133,7 +130,7 @@ main {
 }
 
 #skills-wrapper ul {
-    margin: 2rem 0;
+    margin: 0.5rem 0;
 }
 
 #skills-wrapper ul li {
@@ -149,13 +146,13 @@ main {
 
 #contact-wrapper {
     display: grid;
-    grid-template-columns: 2;
+    grid-template-columns: 0.5fr 0.5fr;
     align-items: center;
     margin-top: 10rem;
 }
 
 #contact-wrapper h2, #contact-wrapper h3 {
-    grid-column: 1;
+    grid-column: 2;
     margin-left: 10rem;
 }
 
@@ -170,9 +167,10 @@ main {
 }
 
 #contact-wrapper div {
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 1 / span 2;
-    margin-left: 10rem;
+    justify-self: end;
+    margin-right: 2rem;
 }
 
 #contact-wrapper div a img{
@@ -182,22 +180,26 @@ main {
 
 
 @media (max-width: 480px) {
+
     #menu-wrapper {
         position: sticky;
         top: 0;
         padding-top: 5rem;
     }
 
+    #menu ul li{
+        margin: 0.5rem 0.5rem;
+    }
+
     #about-wrapper p {
         font-size: var(--md-fs);
         font-weight: 600;
         letter-spacing: 0.2px;
-        line-height: 2.5rem;
+        line-height: 2rem;
     }
 
     #projects-wrapper {
-        row-gap: 6rem;
-        margin-top: 3rem;
+        row-gap: 3rem;
     }
 
     #projects-wrapper div {
@@ -209,38 +211,36 @@ main {
     }
 
     #skills-wrapper {
-        margin-top: 5rem;
+        margin-top: 0rem;
     }
 
     #skills-wrapper ul li {
-        font-size: 2.2rem;
+        font-size: var(--md-fs);
         margin: 1rem;
     }
 
     #contact-wrapper {
-        margin-top: 5rem;
+        margin-top: 0rem;
         padding-bottom: 5rem;
     }
 
     #contact-wrapper h2, #contact-wrapper h3 {
-        margin-left: 2rem;
+        font-size: var(--lg-fs);
+        margin-left: 0rem;
     }
 
     #contact-wrapper div {
-        margin-left: 2rem;
+        margin-left: 0.5rem;
     }
 }
-
 
 @media (min-width: 1024px) {
     #menu-wrapper {
         text-align: center;
         background-color: var(--white);
         height: 5rem;
-        padding-top: 10rem;
+        padding-top: 5rem;
     }
-
-    
 
     #menu ul li a, #menu ul li i {
         font-size: 2.5rem;
@@ -251,14 +251,14 @@ main {
     #profile-picture {
         width: 10vw;
         border-radius: 50%;
-        margin-top: 3rem;
+        margin-bottom: 1rem;
     }
 
     #projects-wrapper {
         display: grid;
         grid-template-rows: 0.1fr 1fr;
         grid-template-columns: 0.5fr repeat(3, 0.5fr) 0.5fr;
-        column-gap: 6rem;
+        column-gap: 4rem;
         row-gap: 4rem;
     }
 
@@ -293,6 +293,7 @@ main {
 
     #skills-wrapper h2 {
         font-size: var(--xl-fs);
+        margin-top: 0rem;
     }
 
     #skills-wrapper ul li {
@@ -301,12 +302,13 @@ main {
     }
 
     #contact-wrapper {
-        margin-top: 5rem;
+        margin-top: 0rem;
         padding-bottom: 5rem;
     }
 
     #contact-wrapper h2, #contact-wrapper h3 {
-        margin-left: 25rem;
+        justify-self: start;
+        margin-left: 0rem;
     }
 
     #contact-wrapper div {
@@ -320,6 +322,9 @@ main {
 }
 
 @media (min-width: 1480px) {
+    #contact-wrapper h2, #contact-wrapper h3 {
+        justify-self: start;
+    }
 
     #contact-wrapper div {
         margin-left: 15rem;
